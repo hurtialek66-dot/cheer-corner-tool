@@ -29,16 +29,13 @@ function About() {
           <img src={exteriorImg} alt="Vanjski izgled džamije" width={1400} height={900} loading="lazy" className="rounded-xl shadow-[var(--shadow-soft)]" />
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Osnovana prije više od dvije decenije od strane male grupe porodica, džamija Rečane
-              izrasla je u živu zajednicu koja služi stotinama vjernika svake sedmice.
+              Allahov Poslanik, Muhammed, sallallahu alejhi ve sellem, rekao je: „Allahu su najdraža mjesta na Zemlji džamije.“ Ove plemenite riječi podsjećaju nas na posebnu vrijednost džamije kao mjesta u kojem se vjernici okupljaju radi ibadeta, učenja, dove i međusobnog jačanja bratskih veza.
             </p>
             <p>
-              I dalje smo posvećeni vrijednostima koje su oblikovale naše početke: autentičnom
-              islamskom učenju, toploj gostoljubivosti i služenju svim ljudima — muslimanima i nemuslimanima.
+              Džamija nije samo građevina – ona je srce zajednice, mjesto gdje se njeguje vjera, pronalazi unutrašnji mir i gradi zajedništvo. U njenom okrilju odgajaju se nove generacije, širi se znanje i učvršćuju vrijednosti koje nas vode ka dobru.
             </p>
             <p>
-              Naš imam i volonteri zajedno rade kako bi džamija bila mjesto dobrodošlice
-              za namaz, razmišljanje, obrazovanje i zajedništvo.
+              Neka ova stranica bude prostor koji će vas približiti našoj džamiji, njenim aktivnostima i džematu, te vas podsjetiti na ljepotu okupljanja u Allahovoj kući i važnost zajedničkog činjenja dobra.
             </p>
           </div>
         </div>
