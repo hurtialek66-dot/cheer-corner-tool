@@ -14,9 +14,9 @@ const prayerTimesQuery = queryOptions({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Džamija Al-Nur — Prizren, Kosovo" },
-      { name: "description", content: "Džamija Al-Nur u Prizrenu, Kosovo — dobrodošli na dnevne namaze, džumu, časove Kur'ana i događaje zajednice." },
-      { property: "og:title", content: "Džamija Al-Nur — Prizren, Kosovo" },
+      { title: "Džamija Recane — Prizren, Kosovo" },
+      { name: "description", content: "Džamija Recane u Prizrenu, Kosovo — dobrodošli na dnevne namaze, džumu, časove Kur'ana i događaje zajednice." },
+      { property: "og:title", content: "Džamija Recane — Prizren, Kosovo" },
       { property: "og:description", content: "Dnevni namazi, džuma, časovi i događaji zajednice u Prizrenu, Kosovo." },
       { property: "og:url", content: "/" },
     ],
@@ -34,7 +34,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Unutrašnjost džamije Al-Nur"
+            alt="Unutrašnjost džamije Recane"
             width={1600}
             height={1104}
             className="h-full w-full object-cover"
@@ -49,7 +49,7 @@ function Home() {
             Dom vjere, znanja i zajedništva.
           </h1>
           <p className="mt-6 text-lg md:text-xl opacity-90 max-w-xl">
-            Dobrodošli u džamiju Al-Nur — mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
+            Dobrodošli u džamiju Recane — mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
@@ -92,7 +92,7 @@ function Home() {
           <div>
             <img
               src={exteriorImg}
-              alt="Vanjski izgled džamije Al-Nur u sumrak"
+              alt="Vanjski izgled džamije Recane u sumrak"
               width={1400}
               height={900}
               loading="lazy"
@@ -105,7 +105,7 @@ function Home() {
               Mir s vama. Dođite onakvi kakvi jeste.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Džamija Al-Nur je hram ibadeta koji služi muslimanima i dočekuje
+              Džamija Recane je hram ibadeta koji služi muslimanima i dočekuje
               komšije svih porijekla. Naša vrata su otvorena za pet dnevnih
               namaza, džumu, halke znanja i događaje zajednice tokom cijele godine.
             </p>
@@ -156,7 +156,7 @@ function Home() {
           <p className="font-arabic text-3xl text-[color:var(--gold)] mb-6">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ</p>
           <h2 className="font-display text-4xl md:text-5xl">Podržite našu džamiju.</h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
-            Al-Nur se u potpunosti održava zahvaljujući velikodušnosti naše zajednice.
+            Recane se u potpunosti održava zahvaljujući velikodušnosti naše zajednice.
             Vaša donacija pomaže da naša vrata ostanu otvorena, programi aktivni, a komšije nahranjeni.
           </p>
           <Link
