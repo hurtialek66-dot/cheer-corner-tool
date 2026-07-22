@@ -4,10 +4,10 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Visit — Al-Noor Mosque" },
-      { name: "description", content: "Visit Al-Noor Mosque. Address, hours, phone, email, and directions." },
-      { property: "og:title", content: "Contact Al-Noor Mosque" },
-      { property: "og:description", content: "Address, hours, phone, email, and directions." },
+      { title: "Kontakt i posjeta — Džamija Al-Nur" },
+      { name: "description", content: "Posjetite džamiju Al-Nur. Adresa, radno vrijeme, telefon, e-mail i uputstva." },
+      { property: "og:title", content: "Kontakt — Džamija Al-Nur" },
+      { property: "og:description", content: "Adresa, radno vrijeme, telefon, e-mail i uputstva." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -19,51 +19,51 @@ function Contact() {
   return (
     <>
       <PageHeader
-        eyebrow="Visit"
-        title="Come pray with us."
-        description="We're open every day for the five daily prayers. Visitors are always welcome — no appointment needed."
+        eyebrow="Posjeta"
+        title="Dođite klanjati s nama."
+        description="Otvoreni smo svakog dana za pet dnevnih namaza. Posjetioci su uvijek dobrodošli — bez najave."
       />
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="font-display text-3xl mb-6">Get in touch</h2>
+            <h2 className="font-display text-3xl mb-6">Kontaktirajte nas</h2>
             <dl className="space-y-6">
               <div>
-                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Address</dt>
-                <dd className="mt-2 text-lg">123 Community Way<br />Your City, ST 00000</dd>
+                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Adresa</dt>
+                <dd className="mt-2 text-lg">Ulica Zajednice 123<br />Prizren, Kosovo</dd>
               </div>
               <div>
-                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Phone</dt>
+                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Telefon</dt>
                 <dd className="mt-2 text-lg">(555) 123-4567</dd>
               </div>
               <div>
-                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Email</dt>
-                <dd className="mt-2 text-lg">info@alnoor-mosque.org</dd>
+                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">E-mail</dt>
+                <dd className="mt-2 text-lg">info@alnur-dzamija.org</dd>
               </div>
               <div>
-                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Hours</dt>
-                <dd className="mt-2 text-lg">Open daily, 30 min before Fajr — 30 min after Isha</dd>
+                <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Radno vrijeme</dt>
+                <dd className="mt-2 text-lg">Otvoreno svaki dan, 30 min prije sabaha — 30 min nakon jacije</dd>
               </div>
             </dl>
           </div>
 
           <form className="rounded-xl border border-border/60 bg-card p-8 space-y-4">
-            <h2 className="font-display text-3xl mb-2">Send a message</h2>
-            <p className="text-sm text-muted-foreground mb-4">We usually reply within a day, in shā' Allāh.</p>
+            <h2 className="font-display text-3xl mb-2">Pošaljite poruku</h2>
+            <p className="text-sm text-muted-foreground mb-4">Obično odgovaramo u roku od jednog dana, inšaAllah.</p>
             <div>
-              <label className="block text-sm mb-2">Your name</label>
+              <label className="block text-sm mb-2">Vaše ime</label>
               <input type="text" className="w-full rounded-md border border-border bg-background px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
-              <label className="block text-sm mb-2">Email</label>
+              <label className="block text-sm mb-2">E-mail</label>
               <input type="email" className="w-full rounded-md border border-border bg-background px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
-              <label className="block text-sm mb-2">Message</label>
+              <label className="block text-sm mb-2">Poruka</label>
               <textarea rows={5} className="w-full rounded-md border border-border bg-background px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <button type="button" className="rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:opacity-90 transition">
-              Send message
+              Pošalji poruku
             </button>
           </form>
         </div>

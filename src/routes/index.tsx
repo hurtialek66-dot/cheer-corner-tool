@@ -14,10 +14,10 @@ const prayerTimesQuery = queryOptions({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al-Noor Mosque — Prizren, Kosovo" },
-      { name: "description", content: "Al-Noor Mosque in Prizren, Kosovo welcomes you for daily prayers, Jumu'ah, Quran classes, and community events." },
-      { property: "og:title", content: "Al-Noor Mosque — Prizren, Kosovo" },
-      { property: "og:description", content: "Daily prayers, Jumu'ah, classes, and community events in Prizren, Kosovo." },
+      { title: "Džamija Al-Nur — Prizren, Kosovo" },
+      { name: "description", content: "Džamija Al-Nur u Prizrenu, Kosovo — dobrodošli na dnevne namaze, džumu, časove Kur'ana i događaje zajednice." },
+      { property: "og:title", content: "Džamija Al-Nur — Prizren, Kosovo" },
+      { property: "og:description", content: "Dnevni namazi, džuma, časovi i događaji zajednice u Prizrenu, Kosovo." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -34,7 +34,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Al-Noor Mosque prayer hall"
+            alt="Unutrašnjost džamije Al-Nur"
             width={1600}
             height={1104}
             className="h-full w-full object-cover"
@@ -46,23 +46,23 @@ function Home() {
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
           </p>
           <h1 className="font-display text-5xl md:text-7xl leading-[1.05] max-w-3xl">
-            A home for faith, learning, and community.
+            Dom vjere, znanja i zajedništva.
           </h1>
           <p className="mt-6 text-lg md:text-xl opacity-90 max-w-xl">
-            Welcome to Al-Noor Mosque — a place of worship open to all, in the heart of our community.
+            Dobrodošli u džamiju Al-Nur — mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               to="/prayer-times"
               className="rounded-full bg-[var(--gold)] text-primary px-7 py-3 text-sm font-semibold hover:opacity-90 transition"
             >
-              Today's prayer times
+              Današnji vakat namaza
             </Link>
             <Link
               to="/about"
               className="rounded-full border border-primary-foreground/40 px-7 py-3 text-sm font-semibold hover:bg-primary-foreground/10 transition"
             >
-              About the mosque
+              O džamiji
             </Link>
           </div>
         </div>
@@ -73,14 +73,14 @@ function Home() {
         <div className="mx-auto max-w-6xl px-6 py-10">
           <div className="flex items-end justify-between mb-6 flex-wrap gap-4">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)]">Today</p>
-              <h2 className="font-display text-3xl">Prayer Times</h2>
+              <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)]">Danas</p>
+              <h2 className="font-display text-3xl">Vakat namaza</h2>
             </div>
             <Link to="/prayer-times" className="text-sm text-primary underline underline-offset-4">
-              Full schedule →
+              Cijeli raspored →
             </Link>
           </div>
-          <Suspense fallback={<div className="text-muted-foreground text-sm">Loading prayer times…</div>}>
+          <Suspense fallback={<div className="text-muted-foreground text-sm">Učitavanje vaktova…</div>}>
             <TodayPrayerStrip />
           </Suspense>
         </div>
@@ -92,7 +92,7 @@ function Home() {
           <div>
             <img
               src={exteriorImg}
-              alt="Al-Noor Mosque exterior at dusk"
+              alt="Vanjski izgled džamije Al-Nur u sumrak"
               width={1400}
               height={900}
               loading="lazy"
@@ -100,25 +100,25 @@ function Home() {
             />
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)] mb-4">Assalāmu ʿalaykum</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)] mb-4">Es-selamu alejkum</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Peace be upon you. Come as you are.
+              Mir s vama. Dođite onakvi kakvi jeste.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Al-Noor Mosque is a house of worship serving Muslims and welcoming
-              neighbors of every background. Our doors are open for the five daily
-              prayers, Jumu'ah, learning circles, and community gatherings throughout the year.
+              Džamija Al-Nur je hram ibadeta koji služi muslimanima i dočekuje
+              komšije svih porijekla. Naša vrata su otvorena za pet dnevnih
+              namaza, džumu, halke znanja i događaje zajednice tokom cijele godine.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Whether you're visiting for the first time or joining us regularly,
-              you'll find a welcoming place to pray, learn, and belong.
+              Bilo da nam dolazite prvi put ili nam se redovno pridružujete,
+              pronaći ćete toplo mjesto za namaz, učenje i pripadnost.
             </p>
             <div className="mt-8 flex gap-3">
               <Link to="/about" className="rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium">
-                Our story
+                Naša priča
               </Link>
               <Link to="/contact" className="rounded-full border border-border px-6 py-3 text-sm font-medium hover:bg-muted transition">
-                Plan a visit
+                Planiraj posjetu
               </Link>
             </div>
           </div>
@@ -129,17 +129,17 @@ function Home() {
       <section className="py-20 bg-secondary/50 border-y border-border/60">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-2xl mb-14">
-            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)] mb-4">What we offer</p>
-            <h2 className="font-display text-4xl md:text-5xl">A place for every part of the week.</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)] mb-4">Šta nudimo</p>
+            <h2 className="font-display text-4xl md:text-5xl">Mjesto za svaki dio sedmice.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { t: "Daily Prayers", d: "Fajr through Isha, every day of the year — with iqamah shortly after each adhan." },
-              { t: "Jumu'ah Prayer", d: "Two khutbahs each Friday afternoon. Overflow space available. All welcome." },
-              { t: "Quran & Learning", d: "Weekly Quran classes, tajweed, and youth halaqah for all ages and levels." },
-              { t: "Community Events", d: "Iftars, Eid celebrations, lectures, and family programs throughout the year." },
-              { t: "New Muslim Support", d: "Guidance, mentorship, and a warm welcome for those exploring or embracing Islam." },
-              { t: "Charity & Zakat", d: "Collection and distribution of zakat, sadaqah, and food assistance for those in need." },
+              { t: "Dnevni namazi", d: "Od sabaha do jacije, svaki dan u godini — sa ikametom ubrzo nakon svakog ezana." },
+              { t: "Džuma-namaz", d: "Dvije hutbe svakog petka poslijepodne. Dostupan dodatni prostor. Svi dobrodošli." },
+              { t: "Kur'an i učenje", d: "Sedmični časovi Kur'ana, tedžvida i omladinske halke za sve uzraste i nivoe." },
+              { t: "Događaji zajednice", d: "Iftari, bajramske proslave, predavanja i porodični programi tokom godine." },
+              { t: "Podrška novim muslimanima", d: "Vodstvo, mentorstvo i topla dobrodošlica za one koji istražuju ili prihvataju islam." },
+              { t: "Zekat i sadaka", d: "Sakupljanje i raspodjela zekata, sadake i pomoći u hrani onima kojima je potrebna." },
             ].map((f) => (
               <article key={f.t} className="rounded-xl bg-card border border-border/60 p-7 hover:shadow-[var(--shadow-soft)] transition">
                 <h3 className="font-display text-2xl text-primary mb-3">{f.t}</h3>
@@ -154,16 +154,16 @@ function Home() {
       <section className="py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="font-arabic text-3xl text-[color:var(--gold)] mb-6">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ</p>
-          <h2 className="font-display text-4xl md:text-5xl">Support our masjid.</h2>
+          <h2 className="font-display text-4xl md:text-5xl">Podržite našu džamiju.</h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
-            Al-Noor is sustained entirely by the generosity of our community.
-            Your donation helps keep our doors open, our programs running, and our neighbors fed.
+            Al-Nur se u potpunosti održava zahvaljujući velikodušnosti naše zajednice.
+            Vaša donacija pomaže da naša vrata ostanu otvorena, programi aktivni, a komšije nahranjeni.
           </p>
           <Link
             to="/contact"
             className="mt-10 inline-flex rounded-full bg-primary text-primary-foreground px-8 py-4 font-medium shadow-[var(--shadow-soft)] hover:opacity-90 transition"
           >
-            Donate now
+            Doniraj sada
           </Link>
         </div>
       </section>
@@ -174,11 +174,11 @@ function Home() {
 function TodayPrayerStrip() {
   const { data } = useSuspenseQuery(prayerTimesQuery);
   const items = [
-    { name: "Fajr", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
-    { name: "Dhuhr", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
-    { name: "Asr", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
-    { name: "Maghrib", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
-    { name: "Isha", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
+    { name: "Sabah", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
+    { name: "Podne", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
+    { name: "Ikindija", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
+    { name: "Akšam", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
+    { name: "Jacija", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
   ];
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -186,7 +186,7 @@ function TodayPrayerStrip() {
         <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
           <div className="font-display text-xl text-primary">{p.name}</div>
           <div className="mt-3 text-2xl font-semibold tabular-nums">{p.iqamah}</div>
-          <div className="text-xs text-muted-foreground mt-1">Adhan {p.adhan}</div>
+          <div className="text-xs text-muted-foreground mt-1">Ezan {p.adhan}</div>
         </div>
       ))}
     </div>

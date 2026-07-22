@@ -4,10 +4,10 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Events — Al-Noor Mosque" },
-      { name: "description", content: "Upcoming events, lectures, iftars, Eid prayers, and community programs at Al-Noor Mosque." },
-      { property: "og:title", content: "Events at Al-Noor Mosque" },
-      { property: "og:description", content: "Lectures, iftars, Eid prayers, and community programs." },
+      { title: "Događaji — Džamija Al-Nur" },
+      { name: "description", content: "Predstojeći događaji, predavanja, iftari, bajramski namazi i programi zajednice u džamiji Al-Nur." },
+      { property: "og:title", content: "Događaji u džamiji Al-Nur" },
+      { property: "og:description", content: "Predavanja, iftari, bajramski namazi i programi zajednice." },
       { property: "og:url", content: "/events" },
     ],
     links: [{ rel: "canonical", href: "/events" }],
@@ -17,46 +17,46 @@ export const Route = createFileRoute("/events")({
 
 const EVENTS = [
   {
-    date: "Fri, Mar 14",
-    time: "After Maghrib",
-    title: "Community Iftar",
-    body: "Break your fast with the community. Complimentary meal for all — please RSVP so we can plan.",
-    tag: "Ramadan",
+    date: "Pet, 14. mart",
+    time: "Nakon akšama",
+    title: "Zajednički iftar",
+    body: "Iftarite s zajednicom. Besplatan obrok za sve — molimo prijavite se kako bismo planirali.",
+    tag: "Ramazan",
   },
   {
-    date: "Sat, Mar 22",
-    time: "10:00 AM",
-    title: "Youth Halaqah",
-    body: "Weekly gathering for ages 12–18. Quran study, discussion, and refreshments.",
-    tag: "Youth",
+    date: "Sub, 22. mart",
+    time: "10:00",
+    title: "Omladinska halka",
+    body: "Sedmično okupljanje za uzrast 12–18. Učenje Kur'ana, razgovor i osvježenje.",
+    tag: "Mladi",
   },
   {
-    date: "Sun, Mar 30",
-    time: "8:00 AM",
-    title: "Eid al-Fitr Prayer",
-    body: "Two Eid prayers with overflow space. Family breakfast to follow in the community hall.",
-    tag: "Eid",
+    date: "Ned, 30. mart",
+    time: "08:00",
+    title: "Bajram-namaz (Ramazanski bajram)",
+    body: "Dva bajram-namaza sa dodatnim prostorom. Porodični doručak nakon namaza u sali zajednice.",
+    tag: "Bajram",
   },
   {
-    date: "Wed, Apr 3",
-    time: "7:30 PM",
-    title: "Lecture: The Prophetic Character",
-    body: "Guest speaker Sheikh Ahmed on cultivating the character of the Prophet ﷺ in daily life.",
-    tag: "Lecture",
+    date: "Sri, 3. april",
+    time: "19:30",
+    title: "Predavanje: Poslanikov ahlak",
+    body: "Gost predavač šejh Ahmed o njegovanju ahlaka Poslanika ﷺ u svakodnevnom životu.",
+    tag: "Predavanje",
   },
   {
-    date: "Sat, Apr 13",
-    time: "11:00 AM",
-    title: "New Muslim Welcome",
-    body: "An informal meet-up for new Muslims and those exploring Islam. Refreshments provided.",
-    tag: "Community",
+    date: "Sub, 13. april",
+    time: "11:00",
+    title: "Dobrodošlica novim muslimanima",
+    body: "Neformalno okupljanje za nove muslimane i one koji istražuju islam. Osvježenje obezbijeđeno.",
+    tag: "Zajednica",
   },
   {
-    date: "Every Sun",
-    time: "10:00 AM",
-    title: "Weekend Quran School",
-    body: "Quran, Arabic, and Islamic studies for children ages 5–14. Registration open year-round.",
-    tag: "Recurring",
+    date: "Svake nedjelje",
+    time: "10:00",
+    title: "Vikend mekteb",
+    body: "Kur'an, arapski jezik i islamske nauke za djecu uzrasta 5–14. Upisi otvoreni tokom godine.",
+    tag: "Redovno",
   },
 ];
 
@@ -64,9 +64,9 @@ function Events() {
   return (
     <>
       <PageHeader
-        eyebrow="Events"
-        title="What's happening at the masjid."
-        description="From weekly halaqahs to Eid prayers, there's always something bringing us together. All are welcome."
+        eyebrow="Događaji"
+        title="Šta se dešava u našoj džamiji."
+        description="Od sedmičnih halki do bajram-namaza, uvijek se nešto dešava. Svi su dobrodošli."
       />
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-6">
