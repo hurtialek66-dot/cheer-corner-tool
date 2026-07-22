@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site-chrome";
-import exteriorImg from "@/assets/mosque-exterior.jpg";
+import exteriorAsset from "@/assets/mosque-recane-dusk.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
