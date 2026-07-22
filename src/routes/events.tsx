@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Događaji — Džamija Al-Nur" },
-      { name: "description", content: "Predstojeći događaji, predavanja, iftari, bajramski namazi i programi zajednice u džamiji Al-Nur." },
-      { property: "og:title", content: "Događaji u džamiji Al-Nur" },
+      { title: "Događaji — Džamija Recane" },
+      { name: "description", content: "Predstojeći događaji, predavanja, iftari, bajramski namazi i programi zajednice u džamiji Recane." },
+      { property: "og:title", content: "Događaji u džamiji Recane" },
       { property: "og:description", content: "Predavanja, iftari, bajramski namazi i programi zajednice." },
       { property: "og:url", content: "/events" },
     ],

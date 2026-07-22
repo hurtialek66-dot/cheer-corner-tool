@@ -5,9 +5,9 @@ import exteriorImg from "@/assets/mosque-exterior.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "O nama — Džamija Al-Nur" },
-      { name: "description", content: "Naša istorija, misija i zajednica kojoj služimo u džamiji Al-Nur." },
-      { property: "og:title", content: "O džamiji Al-Nur" },
+      { title: "O nama — Džamija Recane" },
+      { name: "description", content: "Naša istorija, misija i zajednica kojoj služimo u džamiji Recane." },
+      { property: "og:title", content: "O džamiji Recane" },
       { property: "og:description", content: "Naša istorija, misija i zajednica." },
       { property: "og:url", content: "/about" },
     ],
@@ -22,14 +22,14 @@ function About() {
       <PageHeader
         eyebrow="O nama"
         title="Zajednica izgrađena na vjeri, znanju i milosti."
-        description="Džamija Al-Nur osnovana je da bude duhovni dom i mjesto pripadnosti za naše komšije."
+        description="Džamija Recane osnovana je da bude duhovni dom i mjesto pripadnosti za naše komšije."
       />
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-start">
           <img src={exteriorImg} alt="Vanjski izgled džamije" width={1400} height={900} loading="lazy" className="rounded-xl shadow-[var(--shadow-soft)]" />
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Osnovana prije više od dvije decenije od strane male grupe porodica, džamija Al-Nur
+              Osnovana prije više od dvije decenije od strane male grupe porodica, džamija Recane
               izrasla je u živu zajednicu koja služi stotinama vjernika svake sedmice.
             </p>
             <p>

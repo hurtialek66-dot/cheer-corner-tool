@@ -13,8 +13,8 @@ const prayerTimesQuery = queryOptions({
 export const Route = createFileRoute("/prayer-times")({
   head: () => ({
     meta: [
-      { title: "Vakat namaza — Prizren, Kosovo | Džamija Al-Nur" },
-      { name: "description", content: "Dnevni ezan i ikamet za Prizren, Kosovo, kao i raspored džume u džamiji Al-Nur." },
+      { title: "Vakat namaza — Prizren, Kosovo | Džamija Recane" },
+      { name: "description", content: "Dnevni ezan i ikamet za Prizren, Kosovo, kao i raspored džume u džamiji Recane." },
       { property: "og:title", content: "Vakat namaza — Prizren, Kosovo" },
       { property: "og:description", content: "Dnevni ezan i ikamet za Prizren, Kosovo." },
       { property: "og:url", content: "/prayer-times" },

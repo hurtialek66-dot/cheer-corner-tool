@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Kontakt i posjeta — Džamija Al-Nur" },
-      { name: "description", content: "Posjetite džamiju Al-Nur. Adresa, radno vrijeme, telefon, e-mail i uputstva." },
-      { property: "og:title", content: "Kontakt — Džamija Al-Nur" },
+      { title: "Kontakt i posjeta — Džamija Recane" },
+      { name: "description", content: "Posjetite džamiju Recane. Adresa, radno vrijeme, telefon, e-mail i uputstva." },
+      { property: "og:title", content: "Kontakt — Džamija Recane" },
       { property: "og:description", content: "Adresa, radno vrijeme, telefon, e-mail i uputstva." },
       { property: "og:url", content: "/contact" },
     ],
@@ -38,7 +38,7 @@ function Contact() {
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">E-mail</dt>
-                <dd className="mt-2 text-lg">info@alnur-dzamija.org</dd>
+                <dd className="mt-2 text-lg">info@dzamija-recane.org</dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-widest text-[color:var(--gold)]">Radno vrijeme</dt>

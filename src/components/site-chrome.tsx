@@ -17,7 +17,7 @@ export function SiteHeader() {
           <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-arabic text-lg">
             ن
           </span>
-          <span className="font-display text-xl tracking-tight">Džamija Al-Nur</span>
+          <span className="font-display text-xl tracking-tight whitespace-pre-line">Džamija Recane{"\n"}</span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm">
           {NAV.map((n) => (
@@ -68,7 +68,7 @@ export function SiteFooter() {
             <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--gold)] text-primary font-arabic text-lg">
               ن
             </span>
-            <span className="font-display text-xl">Džamija Al-Nur</span>
+            <span className="font-display text-xl">Džamija Recane</span>
           </div>
           <p className="mt-4 max-w-sm text-sm opacity-80">
             Mjesto ibadeta, učenja i zajednice. Dobro došli — posjetioci, komšije i vjernici.
@@ -91,7 +91,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 py-5 text-center text-xs opacity-70">
-        © {new Date().getFullYear()} Džamija Al-Nur. Sva prava zadržana.
+        © {new Date().getFullYear()} Džamija Recane. Sva prava zadržana.
       </div>
     </footer>
   );
