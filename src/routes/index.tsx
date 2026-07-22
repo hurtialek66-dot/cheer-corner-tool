@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { Suspense } from "react";
 import heroAsset from "@/assets/mosque-recane-hero.jpg.asset.json";
-import exteriorImg from "@/assets/mosque-exterior.jpg";
+import exteriorImg from "@/assets/mosque-recane-exterior.jpg.asset.json";
 import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
 
 const prayerTimesQuery = queryOptions({
