@@ -24,26 +24,20 @@ const EVENTS = [
     tag: "Ramazan",
   },
   {
-    date: "Ned, 30. mart",
-    time: "08:00",
-    title: "Bajram-namaz (Ramazanski bajram)",
-    body: "Dva bajram-namaza sa dodatnim prostorom. Porodični doručak nakon namaza u sali zajednice.",
+    date: "\n",
+    time: "\n",
+    title: "Bajramska podjela paketića",
+    body: "Za vrijeme Bajrama organizujemo podjelu paketića za djecu mlađeg uzrasta, kako bismo im uljepšali praznik.",
     tag: "Bajram",
   },
   {
     date: "\n",
     time: "\n",
     title: "Predavanja",
-    body: "Gost predavač šejh Ahmed o njegovanju ahlaka Poslanika ﷺ u svakodnevnom životu.",
+    body: "S vremena na vrijeme u našoj džamiji se održavaju predavanja na različite teme. Termini se objavljuju neformalno, pratite obavještenja u džamiji i na ovoj stranici.",
     tag: "PREDAVANJA",
   },
-  {
-    date: "Sub, 13. april",
-    time: "11:00",
-    title: "Dobrodošlica novim muslimanima",
-    body: "Neformalno okupljanje za nove muslimane i one koji istražuju islam. Osvježenje obezbijeđeno.",
-    tag: "Zajednica",
-  },
+
   {
     date: "Svake nedjelje",
     time: "10:00",
