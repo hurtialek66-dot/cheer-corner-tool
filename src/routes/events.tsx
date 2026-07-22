@@ -39,10 +39,10 @@ const EVENTS = [
   },
 
   {
-    date: "Svake nedjelje",
-    time: "10:00",
+    date: "\n",
+    time: "\n",
     title: "Vikend mekteb",
-    body: "Kur'an, arapski jezik i islamske nauke za djecu uzrasta 5–14. Upisi otvoreni tokom godine.",
+    body: "Kur'an, arapski jezik i islamske nauke za sve uzraste\u00a0",
     tag: "Redovno",
   },
 ];
@@ -61,8 +61,8 @@ function Events() {
             <article key={e.title} className="group rounded-xl border border-border/60 bg-card p-7 hover:shadow-[var(--shadow-soft)] transition">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
-                  <div className="text-sm text-primary font-medium">{e.date}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{e.time}</div>
+                  <div className="text-sm text-primary font-medium whitespace-pre-wrap">{e.date}</div>
+                  <div className="text-xs text-muted-foreground mt-1 whitespace-pre-wrap">{e.time}</div>
                 </div>
                 <span className="text-xs uppercase tracking-widest text-[color:var(--gold)] border border-[var(--gold)]/40 rounded-full px-3 py-1">
                   {e.tag}
