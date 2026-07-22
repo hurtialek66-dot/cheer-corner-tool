@@ -49,7 +49,7 @@ function Home() {
             Dom vjere, znanja i zajedništva.
           </h1>
           <p className="mt-6 text-lg md:text-xl opacity-90 max-w-xl">
-            Dobrodošli u džamiju Rečane, mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
+            Dobrodošli u džamiju Rečane, mjesto ibadeta&nbsp;
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
