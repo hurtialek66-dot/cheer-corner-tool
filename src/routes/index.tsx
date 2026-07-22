@@ -1,28 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
+import { Suspense } from "react";
 import heroImg from "@/assets/mosque-hero.jpg";
 import exteriorImg from "@/assets/mosque-exterior.jpg";
+import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
+
+const prayerTimesQuery = queryOptions({
+  queryKey: ["prayer-times", "prizren", new Date().toDateString()],
+  queryFn: () => fetchPrizrenPrayerTimes(),
+  staleTime: 1000 * 60 * 30,
+});
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al-Noor Mosque — A Home for Faith & Community" },
-      { name: "description", content: "Al-Noor Mosque welcomes you for daily prayers, Jumu'ah, Quran classes, and community events. All are welcome." },
-      { property: "og:title", content: "Al-Noor Mosque — A Home for Faith & Community" },
-      { property: "og:description", content: "Daily prayers, Jumu'ah, classes, and community events. All are welcome." },
+      { title: "Al-Noor Mosque — Prizren, Kosovo" },
+      { name: "description", content: "Al-Noor Mosque in Prizren, Kosovo welcomes you for daily prayers, Jumu'ah, Quran classes, and community events." },
+      { property: "og:title", content: "Al-Noor Mosque — Prizren, Kosovo" },
+      { property: "og:description", content: "Daily prayers, Jumu'ah, classes, and community events in Prizren, Kosovo." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
+  loader: ({ context }) => context.queryClient.ensureQueryData(prayerTimesQuery),
   component: Home,
 });
-
-const TODAY_PRAYERS = [
-  { name: "Fajr", adhan: "5:12", iqamah: "5:32" },
-  { name: "Dhuhr", adhan: "1:05", iqamah: "1:25" },
-  { name: "Asr", adhan: "4:40", iqamah: "5:00" },
-  { name: "Maghrib", adhan: "7:18", iqamah: "7:23" },
-  { name: "Isha", adhan: "8:45", iqamah: "9:00" },
-];
 
 function Home() {
   return (
@@ -78,15 +80,9 @@ function Home() {
               Full schedule →
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {TODAY_PRAYERS.map((p) => (
-              <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
-                <div className="font-display text-xl text-primary">{p.name}</div>
-                <div className="mt-3 text-2xl font-semibold tabular-nums">{p.iqamah}</div>
-                <div className="text-xs text-muted-foreground mt-1">Adhan {p.adhan}</div>
-              </div>
-            ))}
-          </div>
+          <Suspense fallback={<div className="text-muted-foreground text-sm">Loading prayer times…</div>}>
+            <TodayPrayerStrip />
+          </Suspense>
         </div>
       </section>
 
@@ -172,5 +168,27 @@ function Home() {
         </div>
       </section>
     </>
+  );
+}
+
+function TodayPrayerStrip() {
+  const { data } = useSuspenseQuery(prayerTimesQuery);
+  const items = [
+    { name: "Fajr", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
+    { name: "Dhuhr", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
+    { name: "Asr", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
+    { name: "Maghrib", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
+    { name: "Isha", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
+  ];
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {items.map((p) => (
+        <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
+          <div className="font-display text-xl text-primary">{p.name}</div>
+          <div className="mt-3 text-2xl font-semibold tabular-nums">{p.iqamah}</div>
+          <div className="text-xs text-muted-foreground mt-1">Adhan {p.adhan}</div>
+        </div>
+      ))}
+    </div>
   );
 }

@@ -1,39 +1,63 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
+import { Suspense } from "react";
 import { PageHeader } from "@/components/site-chrome";
+import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
+
+const prayerTimesQuery = queryOptions({
+  queryKey: ["prayer-times", "prizren", new Date().toDateString()],
+  queryFn: () => fetchPrizrenPrayerTimes(),
+  staleTime: 1000 * 60 * 30,
+});
 
 export const Route = createFileRoute("/prayer-times")({
   head: () => ({
     meta: [
-      { title: "Prayer Times — Al-Noor Mosque" },
-      { name: "description", content: "Daily adhan and iqamah times, Jumu'ah schedule, and monthly calendar at Al-Noor Mosque." },
-      { property: "og:title", content: "Prayer Times — Al-Noor Mosque" },
-      { property: "og:description", content: "Daily adhan and iqamah times, Jumu'ah, and calendar." },
+      { title: "Prayer Times — Prizren, Kosovo | Al-Noor Mosque" },
+      { name: "description", content: "Daily adhan and iqamah times for Prizren, Kosovo, plus Jumu'ah schedule at Al-Noor Mosque." },
+      { property: "og:title", content: "Prayer Times — Prizren, Kosovo" },
+      { property: "og:description", content: "Daily adhan and iqamah times for Prizren, Kosovo." },
       { property: "og:url", content: "/prayer-times" },
     ],
     links: [{ rel: "canonical", href: "/prayer-times" }],
   }),
-  component: PrayerTimes,
+  loader: ({ context }) => context.queryClient.ensureQueryData(prayerTimesQuery),
+  component: PrayerTimesPage,
 });
 
-const PRAYERS = [
-  { name: "Fajr", adhan: "5:12 AM", iqamah: "5:32 AM" },
-  { name: "Sunrise", adhan: "6:45 AM", iqamah: "—" },
-  { name: "Dhuhr", adhan: "1:05 PM", iqamah: "1:25 PM" },
-  { name: "Asr", adhan: "4:40 PM", iqamah: "5:00 PM" },
-  { name: "Maghrib", adhan: "7:18 PM", iqamah: "7:23 PM" },
-  { name: "Isha", adhan: "8:45 PM", iqamah: "9:00 PM" },
-];
-
 const JUMUAH = [
-  { khutbah: "1st Khutbah", time: "1:15 PM" },
-  { khutbah: "2nd Khutbah", time: "2:15 PM" },
+  { khutbah: "1st Khutbah", time: "13:15" },
+  { khutbah: "2nd Khutbah", time: "14:15" },
 ];
 
-function PrayerTimes() {
-  const today = new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+function PrayerTimesPage() {
   return (
     <>
-      <PageHeader eyebrow="Prayer Times" title="Today's schedule." description={today} />
+      <Suspense fallback={<PageHeader eyebrow="Prayer Times" title="Loading…" description="Prizren, Kosovo" />}>
+        <PrayerTimesContent />
+      </Suspense>
+    </>
+  );
+}
+
+function PrayerTimesContent() {
+  const { data } = useSuspenseQuery(prayerTimesQuery);
+  const rows = [
+    { name: "Fajr", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
+    { name: "Sunrise", adhan: data.timings.Sunrise, iqamah: "—" },
+    { name: "Dhuhr", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
+    { name: "Asr", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
+    { name: "Maghrib", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
+    { name: "Isha", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
+  ];
+
+  return (
+    <>
+      <PageHeader
+        eyebrow="Prayer Times · Prizren, Kosovo"
+        title="Today's schedule."
+        description={`${data.date.readable} · ${data.date.hijri}`}
+      />
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <div className="overflow-hidden rounded-xl border border-border/60">
@@ -46,7 +70,7 @@ function PrayerTimes() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/60">
-                {PRAYERS.map((p) => (
+                {rows.map((p) => (
                   <tr key={p.name} className="hover:bg-secondary/50 transition">
                     <td className="px-6 py-4 font-display text-xl text-primary">{p.name}</td>
                     <td className="px-6 py-4 tabular-nums text-lg">{p.adhan}</td>
@@ -56,6 +80,9 @@ function PrayerTimes() {
               </tbody>
             </table>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Times calculated for Prizren, Kosovo using the Diyanet method. Iqamah times are approximate.
+          </p>
         </div>
       </section>
 
