@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Džamija Rečane — Mjesto ibadeta, učenja i zajednice" },
-      { name: "description", content: "Dobrodošli u džamiju Rečane. Dnevni vreme namaza, džuma, događaji zajednice, časovi Kur'ana i još mnogo toga." },
+      { name: "description", content: "Dobrodošli u džamiju Rečane. Dnevni vreme namaza, događaji zajednice, časovi Kur'ana i još mnogo toga." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Džamija Rečane" },
       { name: "twitter:card", content: "summary_large_image" },
