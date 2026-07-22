@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
 const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/prayer-times", label: "Prayer Times" },
-  { to: "/events", label: "Events" },
-  { to: "/services", label: "Services" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Početna" },
+  { to: "/about", label: "O nama" },
+  { to: "/prayer-times", label: "Vakat namaza" },
+  { to: "/events", label: "Događaji" },
+  { to: "/services", label: "Usluge" },
+  { to: "/contact", label: "Kontakt" },
 ] as const;
 
 export function SiteHeader() {
@@ -17,7 +17,7 @@ export function SiteHeader() {
           <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-arabic text-lg">
             ن
           </span>
-          <span className="font-display text-xl tracking-tight">Al-Noor Mosque</span>
+          <span className="font-display text-xl tracking-tight">Džamija Al-Nur</span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm">
           {NAV.map((n) => (
@@ -37,7 +37,7 @@ export function SiteHeader() {
           to="/contact"
           className="hidden md:inline-flex rounded-full bg-primary text-primary-foreground px-5 py-2 text-sm font-medium hover:opacity-90 transition"
         >
-          Donate
+          Doniraj
         </Link>
       </div>
       {/* Mobile nav */}
@@ -68,30 +68,30 @@ export function SiteFooter() {
             <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--gold)] text-primary font-arabic text-lg">
               ن
             </span>
-            <span className="font-display text-xl">Al-Noor Mosque</span>
+            <span className="font-display text-xl">Džamija Al-Nur</span>
           </div>
           <p className="mt-4 max-w-sm text-sm opacity-80">
-            A place of worship, learning, and community. All are welcome — visitors, neighbors, and worshippers alike.
+            Mjesto ibadeta, učenja i zajednice. Dobro došli — posjetioci, komšije i vjernici.
           </p>
         </div>
         <div>
-          <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Visit</h4>
+          <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Posjetite nas</h4>
           <p className="text-sm opacity-90 leading-relaxed">
-            123 Community Way<br />
-            Your City, ST 00000<br />
-            Open daily for prayers
+            Ulica Zajednice 123<br />
+            Prizren, Kosovo<br />
+            Otvoreno svaki dan za namaz
           </p>
         </div>
         <div>
-          <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Contact</h4>
+          <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Kontakt</h4>
           <p className="text-sm opacity-90 leading-relaxed">
-            info@alnoor-mosque.org<br />
+            info@alnur-dzamija.org<br />
             (555) 123-4567
           </p>
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 py-5 text-center text-xs opacity-70">
-        © {new Date().getFullYear()} Al-Noor Mosque. All rights reserved.
+        © {new Date().getFullYear()} Džamija Al-Nur. Sva prava zadržana.
       </div>
     </footer>
   );

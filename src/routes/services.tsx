@@ -4,10 +4,10 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Al-Noor Mosque" },
-      { name: "description", content: "Marriage services, funeral (janazah) services, new Muslim support, counseling, and zakat at Al-Noor Mosque." },
-      { property: "og:title", content: "Services — Al-Noor Mosque" },
-      { property: "og:description", content: "Marriage, janazah, new Muslim support, counseling, and zakat." },
+      { title: "Usluge — Džamija Al-Nur" },
+      { name: "description", content: "Nikah, dženaza, podrška novim muslimanima, savjetovanje i zekat u džamiji Al-Nur." },
+      { property: "og:title", content: "Usluge — Džamija Al-Nur" },
+      { property: "og:description", content: "Nikah, dženaza, podrška novim muslimanima, savjetovanje i zekat." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -16,21 +16,21 @@ export const Route = createFileRoute("/services")({
 });
 
 const SERVICES = [
-  { t: "Marriage (Nikah)", d: "Nikah ceremonies performed by our imam. Please contact us at least 30 days in advance." },
-  { t: "Janazah Services", d: "Ghusl, kafan, janazah prayer, and burial guidance for families in need." },
-  { t: "New Muslim Support", d: "Take your shahada with us. Mentorship, resources, and community for the journey ahead." },
-  { t: "Counseling", d: "Confidential faith-based counseling for individuals, couples, and families." },
-  { t: "Zakat & Sadaqah", d: "Collection and local distribution of zakat, plus our year-round food pantry." },
-  { t: "Interfaith & Tours", d: "Guided mosque tours and interfaith dialogue for schools, groups, and neighbors." },
+  { t: "Nikah (vjenčanje)", d: "Nikah obrede vodi naš imam. Molimo kontaktirajte nas najmanje 30 dana unaprijed." },
+  { t: "Dženaza", d: "Gasuljenje, kefinjenje, dženaza-namaz i vođenje ukopa za porodice u potrebi." },
+  { t: "Podrška novim muslimanima", d: "Uzmite šehadet s nama. Mentorstvo, resursi i zajednica za put koji slijedi." },
+  { t: "Savjetovanje", d: "Povjerljivo savjetovanje na osnovi vjere za pojedince, parove i porodice." },
+  { t: "Zekat i sadaka", d: "Prikupljanje i lokalna raspodjela zekata, uz našu godišnju ostavu hrane." },
+  { t: "Međuvjerski dijalog i obilasci", d: "Vođeni obilasci džamije i međuvjerski razgovori za škole, grupe i komšije." },
 ];
 
 function Services() {
   return (
     <>
       <PageHeader
-        eyebrow="Services"
-        title="How we serve our community."
-        description="From the everyday to the milestone, we're here for the moments that matter."
+        eyebrow="Usluge"
+        title="Kako služimo našoj zajednici."
+        description="Od svakodnevnog do najvažnijih trenutaka — tu smo za momente koji su bitni."
       />
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-6">
