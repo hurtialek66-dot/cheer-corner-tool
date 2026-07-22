@@ -134,7 +134,6 @@ function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { t: "Dnevni namazi", d: "Od sabaha do jacije, svaki dan u godini\u00a0" },
-              { t: "Džuma-namaz", d: "\n" },
               { t: "Kur'an i učenje", d: "Sedmični časovi Kur'ana, za sve uzraste i nivoe." },
               { t: "Događaji zajednice", d: "Iftari, bajramske proslave i predavanja" },
               { t: "Zekat i sadaka", d: "Sakupljanje i raspodjela zekata, sadake i pomoći u hrani onima kojima je potrebna." },
