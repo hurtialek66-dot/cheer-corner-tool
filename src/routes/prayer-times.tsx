@@ -25,10 +25,6 @@ export const Route = createFileRoute("/prayer-times")({
   component: PrayerTimesPage,
 });
 
-const JUMUAH = [
-  { khutbah: "1. hutba", time: "13:15" },
-  { khutbah: "2. hutba", time: "14:15" },
-];
 
 function PrayerTimesPage() {
   return (
