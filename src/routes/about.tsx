@@ -21,8 +21,8 @@ function About() {
     <>
       <PageHeader
         eyebrow="O nama"
-        title="Zajednica izgrađena na vjeri, znanju i milosti."
-        description="Džamija Rečane osnovana je da bude duhovni dom i mjesto pripadnosti za naše komšije."
+        title="Mjesto vjere, mira i zajedništva"
+        description={'"Allahu su najdraža mjesta na Zemlji džamije."\n'}
       />
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-start">
