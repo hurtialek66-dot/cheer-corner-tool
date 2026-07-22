@@ -5,9 +5,9 @@ import exteriorImg from "@/assets/mosque-exterior.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "O nama — Džamija Recane" },
-      { name: "description", content: "Naša istorija, misija i zajednica kojoj služimo u džamiji Recane." },
-      { property: "og:title", content: "O džamiji Recane" },
+      { title: "O nama — Džamija Rečane" },
+      { name: "description", content: "Naša istorija, misija i zajednica kojoj služimo u džamiji Rečane." },
+      { property: "og:title", content: "O džamiji Rečane" },
       { property: "og:description", content: "Naša istorija, misija i zajednica." },
       { property: "og:url", content: "/about" },
     ],
@@ -22,14 +22,14 @@ function About() {
       <PageHeader
         eyebrow="O nama"
         title="Zajednica izgrađena na vjeri, znanju i milosti."
-        description="Džamija Recane osnovana je da bude duhovni dom i mjesto pripadnosti za naše komšije."
+        description="Džamija Rečane osnovana je da bude duhovni dom i mjesto pripadnosti za naše komšije."
       />
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-start">
           <img src={exteriorImg} alt="Vanjski izgled džamije" width={1400} height={900} loading="lazy" className="rounded-xl shadow-[var(--shadow-soft)]" />
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Osnovana prije više od dvije decenije od strane male grupe porodica, džamija Recane
+              Osnovana prije više od dvije decenije od strane male grupe porodica, džamija Rečane
               izrasla je u živu zajednicu koja služi stotinama vjernika svake sedmice.
             </p>
             <p>

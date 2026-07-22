@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Kontakt i posjeta — Džamija Recane" },
-      { name: "description", content: "Posjetite džamiju Recane. Adresa, radno vrijeme, telefon, e-mail i uputstva." },
-      { property: "og:title", content: "Kontakt — Džamija Recane" },
+      { title: "Kontakt i posjeta — Džamija Rečane" },
+      { name: "description", content: "Posjetite džamiju Rečane. Adresa, radno vrijeme, telefon, e-mail i uputstva." },
+      { property: "og:title", content: "Kontakt — Džamija Rečane" },
       { property: "og:description", content: "Adresa, radno vrijeme, telefon, e-mail i uputstva." },
       { property: "og:url", content: "/contact" },
     ],
