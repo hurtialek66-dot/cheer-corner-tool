@@ -1,28 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
+import { Suspense } from "react";
 import heroImg from "@/assets/mosque-hero.jpg";
 import exteriorImg from "@/assets/mosque-exterior.jpg";
+import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
+
+const prayerTimesQuery = queryOptions({
+  queryKey: ["prayer-times", "prizren", new Date().toDateString()],
+  queryFn: () => fetchPrizrenPrayerTimes(),
+  staleTime: 1000 * 60 * 30,
+});
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al-Noor Mosque — A Home for Faith & Community" },
-      { name: "description", content: "Al-Noor Mosque welcomes you for daily prayers, Jumu'ah, Quran classes, and community events. All are welcome." },
-      { property: "og:title", content: "Al-Noor Mosque — A Home for Faith & Community" },
-      { property: "og:description", content: "Daily prayers, Jumu'ah, classes, and community events. All are welcome." },
+      { title: "Al-Noor Mosque — Prizren, Kosovo" },
+      { name: "description", content: "Al-Noor Mosque in Prizren, Kosovo welcomes you for daily prayers, Jumu'ah, Quran classes, and community events." },
+      { property: "og:title", content: "Al-Noor Mosque — Prizren, Kosovo" },
+      { property: "og:description", content: "Daily prayers, Jumu'ah, classes, and community events in Prizren, Kosovo." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
+  loader: ({ context }) => context.queryClient.ensureQueryData(prayerTimesQuery),
   component: Home,
 });
-
-const TODAY_PRAYERS = [
-  { name: "Fajr", adhan: "5:12", iqamah: "5:32" },
-  { name: "Dhuhr", adhan: "1:05", iqamah: "1:25" },
-  { name: "Asr", adhan: "4:40", iqamah: "5:00" },
-  { name: "Maghrib", adhan: "7:18", iqamah: "7:23" },
-  { name: "Isha", adhan: "8:45", iqamah: "9:00" },
-];
 
 function Home() {
   return (
