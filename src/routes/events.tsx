@@ -24,13 +24,6 @@ const EVENTS = [
     tag: "Ramazan",
   },
   {
-    date: "Sub, 22. mart",
-    time: "10:00",
-    title: "Omladinska halka",
-    body: "Sedmično okupljanje za uzrast 12–18. Učenje Kur'ana, razgovor i osvježenje.",
-    tag: "Mladi",
-  },
-  {
     date: "Ned, 30. mart",
     time: "08:00",
     title: "Bajram-namaz (Ramazanski bajram)",
