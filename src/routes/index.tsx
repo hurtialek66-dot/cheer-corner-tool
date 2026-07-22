@@ -170,3 +170,25 @@ function Home() {
     </>
   );
 }
+
+function TodayPrayerStrip() {
+  const { data } = useSuspenseQuery(prayerTimesQuery);
+  const items = [
+    { name: "Fajr", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
+    { name: "Dhuhr", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
+    { name: "Asr", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
+    { name: "Maghrib", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
+    { name: "Isha", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
+  ];
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {items.map((p) => (
+        <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
+          <div className="font-display text-xl text-primary">{p.name}</div>
+          <div className="mt-3 text-2xl font-semibold tabular-nums">{p.iqamah}</div>
+          <div className="text-xs text-muted-foreground mt-1">Adhan {p.adhan}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
