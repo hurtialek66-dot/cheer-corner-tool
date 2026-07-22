@@ -80,23 +80,6 @@ function PrayerTimesContent() {
         </div>
       </section>
 
-      <section className="py-16 bg-secondary/50 border-y border-border/60">
-        <div className="mx-auto max-w-4xl px-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)] mb-4">Svakog petka</p>
-          <h2 className="font-display text-4xl mb-8">Džuma-namaz</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {JUMUAH.map((j) => (
-              <div key={j.khutbah} className="rounded-xl bg-card border border-border/60 p-6">
-                <div className="font-display text-2xl text-primary">{j.khutbah}</div>
-                <div className="text-3xl font-semibold mt-2 tabular-nums">{j.time}</div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-muted-foreground">
-            Molimo dođite 10 minuta ranije. Dostupan je dodatni prostor za namaz i parking.
-          </p>
-        </div>
-      </section>
     </>
   );
 }
