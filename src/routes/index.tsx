@@ -137,7 +137,6 @@ function Home() {
               { t: "Džuma-namaz", d: "\n" },
               { t: "Kur'an i učenje", d: "Sedmični časovi Kur'ana, za sve uzraste i nivoe." },
               { t: "Događaji zajednice", d: "Iftari, bajramske proslave i predavanja" },
-              { t: "Podrška novim muslimanima", d: "Vodstvo, mentorstvo i topla dobrodošlica za one koji istražuju ili prihvataju islam." },
               { t: "Zekat i sadaka", d: "Sakupljanje i raspodjela zekata, sadake i pomoći u hrani onima kojima je potrebna." },
             ].map((f) => (
               <article key={f.t} className="rounded-xl bg-card border border-border/60 p-7 hover:shadow-[var(--shadow-soft)] transition">
