@@ -15,9 +15,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Džamija Rečane — Prizren, Kosovo" },
-      { name: "description", content: "Džamija Rečane u Prizrenu, Kosovo — dobrodošli na dnevne namaze, džumu, časove Kur'ana i događaje zajednice." },
+      { name: "description", content: "Džamija Rečane u Prizrenu, Kosovo — dobrodošli na dnevne namaze, časove Kur'ana i događaje zajednice." },
       { property: "og:title", content: "Džamija Rečane — Prizren, Kosovo" },
-      { property: "og:description", content: "Dnevni namazi, džuma, časovi i događaji zajednice u Prizrenu, Kosovo." },
+      { property: "og:description", content: "Dnevni namazi, časovi i događaji zajednice u Prizrenu, Kosovo." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
