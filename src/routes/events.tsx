@@ -17,10 +17,10 @@ export const Route = createFileRoute("/events")({
 
 const EVENTS = [
   {
-    date: "Pet, 14. mart",
-    time: "Nakon akšama",
+    date: "\n",
+    time: "\n",
     title: "Zajednički iftar",
-    body: "Iftarite s zajednicom. Besplatan obrok za sve — molimo prijavite se kako bismo planirali.",
+    body: "Iftarite s zajednicom. Besplatan obrok za sve",
     tag: "Ramazan",
   },
   {
@@ -38,11 +38,11 @@ const EVENTS = [
     tag: "Bajram",
   },
   {
-    date: "Sri, 3. april",
-    time: "19:30",
+    date: "\n",
+    time: "\n",
     title: "Predavanje: Poslanikov ahlak",
     body: "Gost predavač šejh Ahmed o njegovanju ahlaka Poslanika ﷺ u svakodnevnom životu.",
-    tag: "Predavanje",
+    tag: "PREDAVANJA",
   },
   {
     date: "Sub, 13. april",
