@@ -33,12 +33,6 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link
-          to="/contact"
-          className="hidden md:inline-flex rounded-full bg-primary text-primary-foreground px-5 py-2 text-sm font-medium hover:opacity-90 transition"
-        >
-          Doniraj
-        </Link>
       </div>
       {/* Mobile nav */}
       <nav className="md:hidden flex overflow-x-auto gap-5 px-6 pb-3 text-sm">

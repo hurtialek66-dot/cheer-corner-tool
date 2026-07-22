@@ -147,23 +147,6 @@ function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="font-arabic text-3xl text-[color:var(--gold)] mb-6">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ</p>
-          <h2 className="font-display text-4xl md:text-5xl">Podržite našu džamiju.</h2>
-          <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
-            Rečane se u potpunosti održava zahvaljujući velikodušnosti naše zajednice.
-            Vaša donacija pomaže da naša vrata ostanu otvorena, programi aktivni, a komšije nahranjeni.
-          </p>
-          <Link
-            to="/contact"
-            className="mt-10 inline-flex rounded-full bg-primary text-primary-foreground px-8 py-4 font-medium shadow-[var(--shadow-soft)] hover:opacity-90 transition"
-          >
-            Doniraj sada
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
