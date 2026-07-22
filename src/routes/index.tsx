@@ -49,7 +49,7 @@ function Home() {
             Dom vjere, znanja i zajedništva.
           </h1>
           <p className="mt-6 text-lg md:text-xl opacity-90 max-w-xl">
-            Dobrodošli u džamiju Recane — mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
+            Dobrodošli u džamiju Recane, mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
@@ -102,12 +102,11 @@ function Home() {
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)] mb-4">Es-selamu alejkum</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Mir s vama. Dođite onakvi kakvi jeste.
+            {"\n"}
             </h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Džamija Recane je hram ibadeta koji služi muslimanima i dočekuje
-              komšije svih porijekla. Naša vrata su otvorena za pet dnevnih
-              namaza, džumu, halke znanja i događaje zajednice tokom cijele godine.
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+              Es-selamu alejkum dragi prijatelji, džematlije i svi ljudi dobre volje!{"\n\n"}
+              Ova stranica je kreirana sa ciljem da vas redovno obaveštavamo o aktivnostima našeg džemata i džamije u Rečanu.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Bilo da nam dolazite prvi put ili nam se redovno pridružujete,
@@ -134,10 +133,10 @@ function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { t: "Dnevni namazi", d: "Od sabaha do jacije, svaki dan u godini — sa ikametom ubrzo nakon svakog ezana." },
-              { t: "Džuma-namaz", d: "Dvije hutbe svakog petka poslijepodne. Dostupan dodatni prostor. Svi dobrodošli." },
-              { t: "Kur'an i učenje", d: "Sedmični časovi Kur'ana, tedžvida i omladinske halke za sve uzraste i nivoe." },
-              { t: "Događaji zajednice", d: "Iftari, bajramske proslave, predavanja i porodični programi tokom godine." },
+              { t: "Dnevni namazi", d: "Od sabaha do jacije, svaki dan u godini\u00a0" },
+              { t: "Džuma-namaz", d: "\n" },
+              { t: "Kur'an i učenje", d: "Sedmični časovi Kur'ana, za sve uzraste i nivoe." },
+              { t: "Događaji zajednice", d: "Iftari, bajramske proslave i predavanja" },
               { t: "Podrška novim muslimanima", d: "Vodstvo, mentorstvo i topla dobrodošlica za one koji istražuju ili prihvataju islam." },
               { t: "Zekat i sadaka", d: "Sakupljanje i raspodjela zekata, sadake i pomoći u hrani onima kojima je potrebna." },
             ].map((f) => (
