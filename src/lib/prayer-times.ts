@@ -63,7 +63,7 @@ function addMinutes(hhmm: string, offset: number): string {
   return `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")}`;
 }
 
-export function fetchPrizrenPrayerTimes(date = new Date()): PrayerData {
+export async function fetchPrizrenPrayerTimes(date = new Date()): Promise<PrayerData> {
   const city = "Prizren";
   // Prizren isn't in the city offset table (the reference city Deçan sits ~20km
   // away and shares its timings), so we default to 0 minutes offset.
