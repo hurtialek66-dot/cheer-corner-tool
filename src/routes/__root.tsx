@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Džamija Al-Nur — Mjesto ibadeta, učenja i zajednice" },
-      { name: "description", content: "Dobrodošli u džamiju Al-Nur. Dnevni vakat namaza, džuma, događaji zajednice, časovi Kur'ana i još mnogo toga." },
+      { title: "Džamija Rečane — Mjesto ibadeta, učenja i zajednice" },
+      { name: "description", content: "Dobrodošli u džamiju Rečane. Dnevni vreme namaza, džuma, događaji zajednice, časovi Kur'ana i još mnogo toga." },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Džamija Al-Nur" },
+      { property: "og:site_name", content: "Džamija Rečane" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

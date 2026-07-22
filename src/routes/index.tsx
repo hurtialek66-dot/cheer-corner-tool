@@ -3,7 +3,7 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { Suspense } from "react";
 import heroAsset from "@/assets/mosque-recane-hero.jpg.asset.json";
 import exteriorImg from "@/assets/mosque-recane-exterior.jpg.asset.json";
-import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
+import { fetchPrizrenPrayerTimes } from "@/lib/prayer-times";
 
 const prayerTimesQuery = queryOptions({
   queryKey: ["prayer-times", "prizren", new Date().toDateString()],
@@ -14,9 +14,9 @@ const prayerTimesQuery = queryOptions({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Džamija Recane — Prizren, Kosovo" },
-      { name: "description", content: "Džamija Recane u Prizrenu, Kosovo — dobrodošli na dnevne namaze, džumu, časove Kur'ana i događaje zajednice." },
-      { property: "og:title", content: "Džamija Recane — Prizren, Kosovo" },
+      { title: "Džamija Rečane — Prizren, Kosovo" },
+      { name: "description", content: "Džamija Rečane u Prizrenu, Kosovo — dobrodošli na dnevne namaze, džumu, časove Kur'ana i događaje zajednice." },
+      { property: "og:title", content: "Džamija Rečane — Prizren, Kosovo" },
       { property: "og:description", content: "Dnevni namazi, džuma, časovi i događaji zajednice u Prizrenu, Kosovo." },
       { property: "og:url", content: "/" },
     ],
@@ -34,7 +34,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={heroAsset.url}
-            alt="Unutrašnjost džamije Recane"
+            alt="Unutrašnjost džamije Rečane"
             width={1600}
             height={1104}
             className="h-full w-full object-cover"
@@ -49,14 +49,14 @@ function Home() {
             Dom vjere, znanja i zajedništva.
           </h1>
           <p className="mt-6 text-lg md:text-xl opacity-90 max-w-xl">
-            Dobrodošli u džamiju Recane, mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
+            Dobrodošli u džamiju Rečane, mjesto ibadeta otvoreno za sve, u srcu naše zajednice.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               to="/prayer-times"
               className="rounded-full bg-[var(--gold)] text-primary px-7 py-3 text-sm font-semibold hover:opacity-90 transition"
             >
-              Današnji vakat namaza
+              Današnje vreme namaza
             </Link>
             <Link
               to="/about"
@@ -74,7 +74,7 @@ function Home() {
           <div className="flex items-end justify-between mb-6 flex-wrap gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--gold)]">Danas</p>
-              <h2 className="font-display text-3xl">Vakat namaza</h2>
+              <h2 className="font-display text-3xl">Vreme namaza</h2>
             </div>
             <Link to="/prayer-times" className="text-sm text-primary underline underline-offset-4">
               Cijeli raspored →
@@ -106,7 +106,7 @@ function Home() {
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
               Es-selamu alejkum dragi prijatelji, džematlije i svi ljudi dobre volje!{"\n\n"}
-              Ova stranica je kreirana sa ciljem da vas redovno obaveštavamo o aktivnostima našeg džemata i džamije u Rečanu.
+              Ova stranica je kreirana sa ciljem da vas redovno obaveštavamo o aktivnostima našeg džemata i džamije u Rečane.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Bilo da nam dolazite prvi put ili nam se redovno pridružujete,
@@ -154,7 +154,7 @@ function Home() {
           <p className="font-arabic text-3xl text-[color:var(--gold)] mb-6">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ</p>
           <h2 className="font-display text-4xl md:text-5xl">Podržite našu džamiju.</h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
-            Recane se u potpunosti održava zahvaljujući velikodušnosti naše zajednice.
+            Rečane se u potpunosti održava zahvaljujući velikodušnosti naše zajednice.
             Vaša donacija pomaže da naša vrata ostanu otvorena, programi aktivni, a komšije nahranjeni.
           </p>
           <Link
@@ -172,19 +172,19 @@ function Home() {
 function TodayPrayerStrip() {
   const { data } = useSuspenseQuery(prayerTimesQuery);
   const items = [
-    { name: "Sabah", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
-    { name: "Podne", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
-    { name: "Ikindija", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
-    { name: "Akšam", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
-    { name: "Jacija", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
+    { name: "Sabah", adhan: data.timings.Fajr },
+    { name: "Podne", adhan: data.timings.Dhuhr },
+    { name: "Ikindija", adhan: data.timings.Asr },
+    { name: "Akšam", adhan: data.timings.Maghrib },
+    { name: "Jacija", adhan: data.timings.Isha },
   ];
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
       {items.map((p) => (
         <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
           <div className="font-display text-xl text-primary">{p.name}</div>
-          <div className="mt-3 text-2xl font-semibold tabular-nums">{p.iqamah}</div>
-          <div className="text-xs text-muted-foreground mt-1">Ezan {p.adhan}</div>
+          <div className="mt-3 text-2xl font-semibold tabular-nums">{p.adhan}</div>
+          <div className="text-xs text-muted-foreground mt-1">Ezan</div>
         </div>
       ))}
     </div>

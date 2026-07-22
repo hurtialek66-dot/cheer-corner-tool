@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 const NAV = [
   { to: "/", label: "Početna" },
   { to: "/about", label: "O nama" },
-  { to: "/prayer-times", label: "Vakat namaza" },
+  { to: "/prayer-times", label: "Vreme namaza" },
   { to: "/events", label: "Događaji" },
   { to: "/services", label: "Usluge" },
   { to: "/contact", label: "Kontakt" },
@@ -17,7 +17,7 @@ export function SiteHeader() {
           <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-arabic text-lg">
             ن
           </span>
-          <span className="font-display text-xl tracking-tight whitespace-pre-line">Džamija Recane{"\n"}</span>
+          <span className="font-display text-xl tracking-tight whitespace-pre-line">Džamija Rečane{"\n"}</span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm">
           {NAV.map((n) => (
@@ -68,7 +68,7 @@ export function SiteFooter() {
             <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--gold)] text-primary font-arabic text-lg">
               ن
             </span>
-            <span className="font-display text-xl">Džamija Recane</span>
+            <span className="font-display text-xl">Džamija Rečane</span>
           </div>
           <p className="mt-4 max-w-sm text-sm opacity-80">
             Mjesto ibadeta, učenja i zajednice. Dobro došli — posjetioci, komšije i vjernici.
@@ -77,7 +77,7 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Posjetite nas</h4>
           <p className="text-sm opacity-90 leading-relaxed whitespace-pre-wrap">
-            28, Septembar Recane&nbsp; &nbsp; &nbsp; &nbsp; Prizren, Kosovo{"\n\n"}
+            28, Septembar Rečane&nbsp; &nbsp; &nbsp; &nbsp; Prizren, Kosovo{"\n\n"}
           </p>
         </div>
         <div>
@@ -88,7 +88,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 py-5 text-center text-xs opacity-70">
-        © {new Date().getFullYear()} Džamija Recane. Sva prava zadržana.
+        © {new Date().getFullYear()} Džamija Rečane. Sva prava zadržana.
       </div>
     </footer>
   );

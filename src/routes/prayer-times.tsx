@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/site-chrome";
-import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
+import { fetchPrizrenPrayerTimes } from "@/lib/prayer-times";
 
 const prayerTimesQuery = queryOptions({
   queryKey: ["prayer-times", "prizren", new Date().toDateString()],
@@ -13,10 +13,10 @@ const prayerTimesQuery = queryOptions({
 export const Route = createFileRoute("/prayer-times")({
   head: () => ({
     meta: [
-      { title: "Vakat namaza — Prizren, Kosovo | Džamija Recane" },
-      { name: "description", content: "Dnevni ezan i ikamet za Prizren, Kosovo, kao i raspored džume u džamiji Recane." },
-      { property: "og:title", content: "Vakat namaza — Prizren, Kosovo" },
-      { property: "og:description", content: "Dnevni ezan i ikamet za Prizren, Kosovo." },
+      { title: "Vreme namaza — Prizren, Kosovo | Džamija Rečane" },
+      { name: "description", content: "Dnevni ezan za Prizren, Kosovo, kao i raspored džume u džamiji Rečane." },
+      { property: "og:title", content: "Vreme namaza — Prizren, Kosovo" },
+      { property: "og:description", content: "Dnevni ezan za Prizren, Kosovo." },
       { property: "og:url", content: "/prayer-times" },
     ],
     links: [{ rel: "canonical", href: "/prayer-times" }],
@@ -33,7 +33,7 @@ const JUMUAH = [
 function PrayerTimesPage() {
   return (
     <>
-      <Suspense fallback={<PageHeader eyebrow="Vakat namaza" title="Učitavanje…" description="Prizren, Kosovo" />}>
+      <Suspense fallback={<PageHeader eyebrow="Vreme namaza" title="Učitavanje…" description="Prizren, Kosovo" />}>
         <PrayerTimesContent />
       </Suspense>
     </>
@@ -43,18 +43,18 @@ function PrayerTimesPage() {
 function PrayerTimesContent() {
   const { data } = useSuspenseQuery(prayerTimesQuery);
   const rows = [
-    { name: "Sabah", adhan: data.timings.Fajr, iqamah: iqamahFor(data.timings.Fajr, 20) },
-    { name: "Izlazak sunca", adhan: data.timings.Sunrise, iqamah: "—" },
-    { name: "Podne", adhan: data.timings.Dhuhr, iqamah: iqamahFor(data.timings.Dhuhr, 20) },
-    { name: "Ikindija", adhan: data.timings.Asr, iqamah: iqamahFor(data.timings.Asr, 20) },
-    { name: "Akšam", adhan: data.timings.Maghrib, iqamah: iqamahFor(data.timings.Maghrib, 5) },
-    { name: "Jacija", adhan: data.timings.Isha, iqamah: iqamahFor(data.timings.Isha, 15) },
+    { name: "Sabah", adhan: data.timings.Fajr },
+    { name: "Izlazak sunca", adhan: data.timings.Sunrise },
+    { name: "Podne", adhan: data.timings.Dhuhr },
+    { name: "Ikindija", adhan: data.timings.Asr },
+    { name: "Akšam", adhan: data.timings.Maghrib },
+    { name: "Jacija", adhan: data.timings.Isha },
   ];
 
   return (
     <>
       <PageHeader
-        eyebrow="Vakat namaza · Prizren, Kosovo"
+        eyebrow="Vreme namaza · Prizren, Kosovo"
         title="Današnji raspored."
         description={`${data.date.readable} · ${data.date.hijri}`}
       />
@@ -66,22 +66,20 @@ function PrayerTimesContent() {
                 <tr>
                   <th className="px-6 py-4 font-display text-lg">Namaz</th>
                   <th className="px-6 py-4 font-display text-lg">Ezan</th>
-                  <th className="px-6 py-4 font-display text-lg">Ikamet</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/60">
                 {rows.map((p) => (
                   <tr key={p.name} className="hover:bg-secondary/50 transition">
                     <td className="px-6 py-4 font-display text-xl text-primary">{p.name}</td>
-                    <td className="px-6 py-4 tabular-nums text-lg">{p.adhan}</td>
-                    <td className="px-6 py-4 tabular-nums text-lg font-semibold">{p.iqamah}</td>
+                    <td className="px-6 py-4 tabular-nums text-lg font-semibold">{p.adhan}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            Vaktovi izračunati za Prizren, Kosovo prema Takvimi izvoru Islamske zajednice Kosova. Vremena ikameta su okvirna.
+            Vremena namaza za Prizren, Kosovo prema Takvimi izvoru Islamske zajednice Kosova.
           </p>
         </div>
       </section>

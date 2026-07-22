@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Usluge — Džamija Recane" },
-      { name: "description", content: "Nikah, dženaza, podrška novim muslimanima, savjetovanje i zekat u džamiji Recane." },
-      { property: "og:title", content: "Usluge — Džamija Recane" },
+      { title: "Usluge — Džamija Rečane" },
+      { name: "description", content: "Nikah, dženaza, podrška novim muslimanima, savjetovanje i zekat u džamiji Rečane." },
+      { property: "og:title", content: "Usluge — Džamija Rečane" },
       { property: "og:description", content: "Nikah, dženaza, podrška novim muslimanima, savjetovanje i zekat." },
       { property: "og:url", content: "/services" },
     ],

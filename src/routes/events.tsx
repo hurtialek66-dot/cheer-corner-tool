@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/site-chrome";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Događaji — Džamija Recane" },
-      { name: "description", content: "Predstojeći događaji, predavanja, iftari, bajramski namazi i programi zajednice u džamiji Recane." },
-      { property: "og:title", content: "Događaji u džamiji Recane" },
+      { title: "Događaji — Džamija Rečane" },
+      { name: "description", content: "Predstojeći događaji, predavanja, iftari, bajramski namazi i programi zajednice u džamiji Rečane." },
+      { property: "og:title", content: "Contracts: "Događaji u džamiji Rečane" },
       { property: "og:description", content: "Predavanja, iftari, bajramski namazi i programi zajednice." },
       { property: "og:url", content: "/events" },
     ],
