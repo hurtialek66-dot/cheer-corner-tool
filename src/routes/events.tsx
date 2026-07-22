@@ -39,10 +39,10 @@ const EVENTS = [
   },
 
   {
-    date: "Svake nedjelje",
-    time: "10:00",
+    date: "\n",
+    time: "\n",
     title: "Vikend mekteb",
-    body: "Kur'an, arapski jezik i islamske nauke za djecu uzrasta 5–14. Upisi otvoreni tokom godine.",
+    body: "Kur'an, arapski jezik i islamske nauke za sve uzraste\u00a0",
     tag: "Redovno",
   },
 ];
