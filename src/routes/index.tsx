@@ -116,9 +116,6 @@ function Home() {
               <Link to="/about" className="rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium">
                 Naša priča
               </Link>
-              <Link to="/contact" className="rounded-full border border-border px-6 py-3 text-sm font-medium hover:bg-muted transition">
-                Planiraj posjetu
-              </Link>
             </div>
           </div>
         </div>
