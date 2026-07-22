@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { Suspense } from "react";
 import heroAsset from "@/assets/mosque-recane-hero.jpg.asset.json";
-import exteriorImg from "@/assets/mosque-exterior.jpg";
+import exteriorImg from "@/assets/mosque-recane-exterior.jpg.asset.json";
 import { fetchPrizrenPrayerTimes, iqamahFor } from "@/lib/prayer-times";
 
 const prayerTimesQuery = queryOptions({
@@ -91,7 +91,7 @@ function Home() {
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-center">
           <div>
             <img
-              src={exteriorImg}
+              src={exteriorImg.url}
               alt="Vanjski izgled džamije Recane u sumrak"
               width={1400}
               height={900}
