@@ -76,17 +76,14 @@ export function SiteFooter() {
         </div>
         <div>
           <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Posjetite nas</h4>
-          <p className="text-sm opacity-90 leading-relaxed">
-            Ulica Zajednice 123<br />
-            Prizren, Kosovo<br />
-            Otvoreno svaki dan za namaz
+          <p className="text-sm opacity-90 leading-relaxed whitespace-pre-wrap">
+            28, Septembar Recane&nbsp; &nbsp; &nbsp; &nbsp; Prizren, Kosovo{"\n\n"}
           </p>
         </div>
         <div>
-          <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">Kontakt</h4>
-          <p className="text-sm opacity-90 leading-relaxed">
-            info@alnur-dzamija.org<br />
-            (555) 123-4567
+          <h4 className="text-sm uppercase tracking-widest opacity-70 mb-4">{"\n"}</h4>
+          <p className="text-sm opacity-90 leading-relaxed whitespace-pre-wrap">
+            {"\n"}
           </p>
         </div>
       </div>
