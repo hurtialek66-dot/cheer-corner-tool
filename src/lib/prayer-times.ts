@@ -84,12 +84,12 @@ export async function fetchPrizrenPrayerTimes(date = new Date()): Promise<Prayer
     Isha: addMinutes(entry.isha, offset),
   };
 
-  const readable = date.toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const WEEKDAYS_BS = ["Nedjelja", "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota"];
+  const MONTHS_BS = [
+    "januar", "februar", "mart", "april", "maj", "juni",
+    "juli", "august", "septembar", "oktobar", "novembar", "decembar",
+  ];
+  const readable = `${WEEKDAYS_BS[date.getDay()]}, ${date.getDate()}. ${MONTHS_BS[date.getMonth()]} ${date.getFullYear()}.`;
 
   return {
     timings: t,

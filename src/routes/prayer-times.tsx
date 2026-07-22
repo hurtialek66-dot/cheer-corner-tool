@@ -51,7 +51,7 @@ function PrayerTimesContent() {
     <>
       <PageHeader
         eyebrow="Vreme namaza · Prizren, Kosovo"
-        title="Današnji raspored."
+        title="Vremenski raspored namaza"
         description={`${data.date.readable} · ${data.date.hijri}`}
       />
       <section className="py-16">
