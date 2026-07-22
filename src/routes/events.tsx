@@ -33,7 +33,7 @@ const EVENTS = [
   {
     date: "\n",
     time: "\n",
-    title: "Predavanje: Poslanikov ahlak",
+    title: "Predavanja",
     body: "Gost predavač šejh Ahmed o njegovanju ahlaka Poslanika ﷺ u svakodnevnom životu.",
     tag: "PREDAVANJA",
   },
