@@ -21,21 +21,25 @@ function About() {
     <>
       <PageHeader
         eyebrow="O nama"
-        title="Mjesto vjere, mira i zajedništva"
-        description={'"Allahu su najdraža mjesta na Zemlji džamije."\n'}
+        title="Dobro došli na zvaničnu stranicu naše džamije"
+        description={"\n"}
       />
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-start">
           <img src={exteriorImg} alt="Vanjski izgled džamije" width={1400} height={900} loading="lazy" className="rounded-xl shadow-[var(--shadow-soft)]" />
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Allahov Poslanik, Muhammed, sallallahu alejhi ve sellem, rekao je: „Allahu su najdraža mjesta na Zemlji džamije.“ Ove plemenite riječi podsjećaju nas na posebnu vrijednost džamije kao mjesta u kojem se vjernici okupljaju radi ibadeta, učenja, dove i međusobnog jačanja bratskih veza.
+              Naša misija je da kroz ibadet, edukaciju i društveno korisne aktivnosti jačamo vjeru, njegujemo islamske vrijednosti i gradimo snažnu i povezanu zajednicu.
+            </p>
+            <p className="whitespace-pre-line">
+              Allahov Poslanik, Muhammed, sallallahu alejhi ve sellem, rekao je:
+
+              „Allahu su najdraža mjesta na Zemlji džamije.“
+
+              Ove plemenite riječi podsjećaju nas na posebnu vrijednost džamije kao mjesta u kojem se vjernici okupljaju radi ibadeta, učenja, dove i međusobnog jačanja  veza.
             </p>
             <p>
-              Džamija nije samo građevina – ona je srce zajednice, mjesto gdje se njeguje vjera, pronalazi unutrašnji mir i gradi zajedništvo. U njenom okrilju odgajaju se nove generacije, širi se znanje i učvršćuju vrijednosti koje nas vode ka dobru.
-            </p>
-            <p>
-              Neka ova stranica bude prostor koji će vas približiti našoj džamiji, njenim aktivnostima i džematu, te vas podsjetiti na ljepotu okupljanja u Allahovoj kući i važnost zajedničkog činjenja dobra.
+              Neka ova stranica bude prostor koji će vas približiti našoj džamiji, njenim aktivnostima i džematu, te vas podsjetiti na ljepotu okupljanja u Allahovoj kući i važnost zajedničkog činjenja dobra. Dobro nam došli.
             </p>
           </div>
         </div>
