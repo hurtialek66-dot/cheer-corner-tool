@@ -80,15 +80,9 @@ function Home() {
               Full schedule →
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {TODAY_PRAYERS.map((p) => (
-              <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
-                <div className="font-display text-xl text-primary">{p.name}</div>
-                <div className="mt-3 text-2xl font-semibold tabular-nums">{p.iqamah}</div>
-                <div className="text-xs text-muted-foreground mt-1">Adhan {p.adhan}</div>
-              </div>
-            ))}
-          </div>
+          <Suspense fallback={<div className="text-muted-foreground text-sm">Loading prayer times…</div>}>
+            <TodayPrayerStrip />
+          </Suspense>
         </div>
       </section>
 
