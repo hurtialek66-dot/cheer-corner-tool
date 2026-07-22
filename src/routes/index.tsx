@@ -91,7 +91,7 @@ function Home() {
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-center">
           <div>
             <img
-              src={exteriorImg}
+              src={exteriorImg.url}
               alt="Vanjski izgled džamije Recane u sumrak"
               width={1400}
               height={900}
