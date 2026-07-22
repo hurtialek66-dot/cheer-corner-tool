@@ -6,7 +6,7 @@ export const Route = createFileRoute("/events")({
     meta: [
       { title: "Događaji — Džamija Rečane" },
       { name: "description", content: "Predstojeći događaji, predavanja, iftari, bajramski namazi i programi zajednice u džamiji Rečane." },
-      { property: "og:title", content: "Contracts: "Događaji u džamiji Rečane" },
+      { property: "og:title", content: "Događaji u džamiji Rečane" },
       { property: "og:description", content: "Predavanja, iftari, bajramski namazi i programi zajednice." },
       { property: "og:url", content: "/events" },
     ],

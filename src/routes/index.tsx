@@ -92,7 +92,7 @@ function Home() {
           <div>
             <img
               src={exteriorImg.url}
-              alt="Vanjski izgled džamije Recane u sumrak"
+              alt="Vanjski izgled džamije Rečane u sumrak"
               width={1400}
               height={900}
               loading="lazy"
