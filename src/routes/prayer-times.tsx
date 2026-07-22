@@ -14,7 +14,7 @@ export const Route = createFileRoute("/prayer-times")({
   head: () => ({
     meta: [
       { title: "Vreme namaza — Prizren, Kosovo | Džamija Rečane" },
-      { name: "description", content: "Dnevni ezan za Prizren, Kosovo, kao i raspored džume u džamiji Rečane." },
+      { name: "description", content: "Dnevni ezan za Prizren, Kosovo, u džamiji Rečane." },
       { property: "og:title", content: "Vreme namaza — Prizren, Kosovo" },
       { property: "og:description", content: "Dnevni ezan za Prizren, Kosovo." },
       { property: "og:url", content: "/prayer-times" },
