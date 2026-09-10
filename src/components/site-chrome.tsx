@@ -6,7 +6,6 @@ const NAV = [
   { to: "/prayer-times", label: "Vreme namaza" },
   { to: "/events", label: "Događaji" },
   { to: "/services", label: "Usluge" },
-  { to: "/contact", label: "Kontakt" },
 ] as const;
 
 export function SiteHeader() {
