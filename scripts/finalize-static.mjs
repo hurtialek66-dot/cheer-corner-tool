@@ -13,10 +13,12 @@ const root = process.cwd();
 const dist = path.join(root, "dist");
 const client = path.join(dist, "client");
 
-if (!existsSync(client)) {
-  console.log("[static] no dist/client directory — nothing to flatten");
+if (!existsSync(client) || !existsSync(path.join(client, "index.html"))) {
+  // Server-rendered build (e.g. inside Lovable) — nothing to flatten.
+  console.log("[static] not a static build — skipping");
   process.exit(0);
 }
+
 
 // Remove server-only artifacts from a previous SSR build.
 for (const leftover of ["server", "nitro.json", "package.json", "package-lock.json", ".output"]) {
