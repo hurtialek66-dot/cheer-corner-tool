@@ -3,6 +3,8 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/site-chrome";
 import { fetchPrizrenPrayerTimes } from "@/lib/prayer-times";
+import { NextPrayerCountdown } from "@/components/next-prayer-countdown";
+import { toHijri, formatHijri } from "@/lib/hijri";
 
 const prayerTimesQuery = queryOptions({
   queryKey: ["prayer-times", "prizren", new Date().toDateString()],
@@ -54,10 +56,13 @@ function PrayerTimesContent() {
       <PageHeader
         eyebrow="Vreme namaza · Prizren, Kosovo"
         title="Vremenski raspored namaza"
-        description={`${data.date.readable} · ${data.date.hijri}`}
+        description={`${data.date.readable} · ${formatHijri(toHijri(new Date()))}`}
       />
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
+          <div className="mb-8">
+            <NextPrayerCountdown timings={data.timings} />
+          </div>
           <div className="overflow-hidden rounded-xl border border-border/60">
             <table className="w-full text-left">
               <thead className="bg-primary text-primary-foreground">

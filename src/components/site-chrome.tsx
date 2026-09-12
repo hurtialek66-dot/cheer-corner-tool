@@ -4,6 +4,9 @@ const NAV = [
   { to: "/", label: "Početna" },
   { to: "/about", label: "O nama" },
   { to: "/prayer-times", label: "Vreme namaza" },
+  { to: "/qibla", label: "Kibla i tesbih" },
+  { to: "/quran", label: "Kur'an i dove" },
+  { to: "/calendar", label: "Kalendar" },
   { to: "/events", label: "Događaji" },
   { to: "/services", label: "Usluge" },
 ] as const;
