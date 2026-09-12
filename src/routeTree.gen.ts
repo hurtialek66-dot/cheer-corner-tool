@@ -15,6 +15,7 @@ import { Route as CalendarRouteImport } from './routes/calendar'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as PrayerTimesRouteImport } from './routes/prayer-times'
 import { Route as QiblaRouteImport } from './routes/qibla'
+import { Route as QuranRouteImport } from './routes/quran'
 import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const QiblaRoute = QiblaRouteImport.update({
   path: '/qibla',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuranRoute = QuranRouteImport.update({
+  id: '/quran',
+  path: '/quran',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/prayer-times': typeof PrayerTimesRoute
   '/qibla': typeof QiblaRoute
+  '/quran': typeof QuranRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/prayer-times': typeof PrayerTimesRoute
   '/qibla': typeof QiblaRoute
+  '/quran': typeof QuranRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/prayer-times': typeof PrayerTimesRoute
   '/qibla': typeof QiblaRoute
+  '/quran': typeof QuranRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/prayer-times'
     | '/qibla'
+    | '/quran'
     | '/services'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/prayer-times'
     | '/qibla'
+    | '/quran'
     | '/services'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/prayer-times'
     | '/qibla'
+    | '/quran'
     | '/services'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   PrayerTimesRoute: typeof PrayerTimesRoute
   QiblaRoute: typeof QiblaRoute
+  QuranRoute: typeof QuranRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QiblaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quran': {
+      id: '/quran'
+      path: '/quran'
+      fullPath: '/quran'
+      preLoaderRoute: typeof QuranRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   PrayerTimesRoute: PrayerTimesRoute,
   QiblaRoute: QiblaRoute,
+  QuranRoute: QuranRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport

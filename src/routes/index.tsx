@@ -160,6 +160,10 @@ function TodayPrayerStrip() {
     { name: "Jacija", adhan: data.timings.Isha },
   ];
   return (
+    <>
+    <div className="mb-6">
+      <NextPrayerCountdown timings={data.timings} />
+    </div>
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
       {items.map((p) => (
         <div key={p.name} className="rounded-lg border border-border/60 bg-background p-5 text-center">
