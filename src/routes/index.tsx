@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import heroAsset from "@/assets/mosque-recane-hero.jpg.asset.json";
 import exteriorImg from "@/assets/mosque-recane-exterior.jpg.asset.json";
 import { fetchPrizrenPrayerTimes } from "@/lib/prayer-times";
+import { NextPrayerCountdown } from "@/components/next-prayer-countdown";
 
 const prayerTimesQuery = queryOptions({
   queryKey: ["prayer-times", "prizren", new Date().toDateString()],
@@ -173,5 +174,6 @@ function TodayPrayerStrip() {
         </div>
       ))}
     </div>
+    </>
   );
 }
