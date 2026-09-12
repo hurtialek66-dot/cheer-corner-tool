@@ -89,6 +89,28 @@ function Home() {
         </div>
       </section>
 
+      {/* Alati */}
+      <section className="py-14">
+        <div className="mx-auto max-w-6xl px-6 grid gap-5 sm:grid-cols-3">
+          {[
+            { to: "/qibla" as const, icon: "🕋", t: "Kibla i tesbih", d: "Smjer Kible i brojač zikra." },
+            { to: "/quran" as const, icon: "📖", t: "Kur'an i dove", d: "Kratke sure i svakodnevne dove." },
+            { to: "/calendar" as const, icon: "🌙", t: "Hidžretski kalendar", d: "Ramazan, Bajrami i mubarek noći." },
+          ].map((c) => (
+            <Link
+              key={c.to}
+              to={c.to}
+              className="group rounded-2xl border border-border/60 bg-card p-7 hover:shadow-[var(--shadow-soft)] hover:-translate-y-0.5 transition"
+            >
+              <span className="text-3xl">{c.icon}</span>
+              <h3 className="mt-4 font-display text-2xl text-primary">{c.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{c.d}</p>
+              <span className="mt-4 inline-block text-sm text-[color:var(--gold)]">Otvori →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Welcome */}
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-14 items-center">
